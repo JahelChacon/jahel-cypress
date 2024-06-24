@@ -5,6 +5,7 @@ class LandingPage {
         this.searchPlace = '#place'
         this.btnFind = '#btnfind'
         this.latLong = '#latlngspan'
+        this.tvSeries = 'a[href="/tv-series-locations"]'
     }
 
     visit(){
@@ -17,6 +18,10 @@ class LandingPage {
 
     clickFind(){
         cy.get(this.btnFind).click()
+    }
+
+    clickTVSeries(){
+        cy.contains('a', 'TV Series Locations').click()
     }
 
     getLatlong(){
